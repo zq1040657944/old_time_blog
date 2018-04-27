@@ -1,0 +1,54 @@
+<div class="layui-col-md4 qf_blog_content_right">
+        <div class="layui-col-md12 qf_blog_index_carousel_right_my">
+            <h2>我的名片</h2>
+            <ul>
+                <li>网名 : 旧时光 / 琪哥</li>
+                <li>职业 : 软件工程师</li>
+                <li>邮箱 : 1040657944@qq.com</li>
+                <li>爱好 : 爬山、摄影、看书</li>
+                <li>座右铭 : 虽然过去不能改变，未来可以。</li>
+            </ul>
+        </div>
+    <div class="layui-col-md12 qf_blog_content_right_tag" >
+        <h2>文章标签</h2>
+        {volist name="article_tag_list" id="v"}
+        <a href="{:url('Index/index/index',['tag'=>$v.id])}" ><span  class="layui-badge  {$v.css}">{$v.name}</span></a>
+        {/volist}
+    </div>
+    <div class="layui-col-md12 qf_blog_content_right_file" >
+        <h2>文章归档</h2>
+        <ol>
+            {volist name="article_date_list" id="v"}
+            <li><a href="{:url('Index/index/index',['date'=>$v.date])}" title="{$v.date_show}">{$v.date_show}</a></li>
+            {/volist}
+        </ol>
+    </div>
+    <div class="layui-col-md12 qf_blog_content_right_hot_article" >
+        <h2>热门文章</h2>
+        <ol>
+            {volist name="article_hot_list" id="v"}
+            <li><a href="{:url('Index/index/detail',['id'=>$v.id])}">{$v.title}</a></li>
+            {/volist}
+        </ol>
+    </div>
+    <div class="layui-col-md12 qf_blog_content_right_link" >
+        <h2>友情链接</h2>
+        <ol>
+            <li><a href="http://www.layui.com" target="_blank">Layui</a></li>
+            <li><a href="http://www.thinkphp.cn" target="_blank">Thinkphp</a></li>
+            <li><a href="http://shutianshu.com/" target="_blank">数天数博客</a></li>
+        </ol>
+    </div>
+    <div class="layui-col-md12 qf_blog_content_right_count" >
+        <h2>网站统计</h2>
+        <ul>
+            <li>建站日期 : {$system.create_date}</li>
+            <li>文章总数 : {$system.article_count} 条</li>
+            <li>运行天数 : {$system.diff_date} 天</li>
+            <li>标签总数 : {$system.tag_count} 个</li>
+            <li>最后更新 : {$system.last_update}</li>
+            <li></li>
+        </ul>
+    </div>
+
+</div>

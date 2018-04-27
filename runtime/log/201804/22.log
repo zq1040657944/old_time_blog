@@ -1,0 +1,599 @@
+---------------------------------------------------------------
+[ 2018-04-22T10:38:58+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] www.ceshi.com/ [运行时间：0.623533s][吞吐率：1.60req/s] [内存消耗：2,368.30kb] [文件加载：62]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524142483,1524197494,1524204107,1524226322',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT file
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\Users\hp\Desktop\ceshi\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/index\view\index\index.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'article_type_list',
+  3 => 'article_tag_list',
+  4 => 'article_date_list',
+  5 => 'article_hot_list',
+  6 => 'system',
+  7 => 'seo',
+  8 => 'footer',
+  9 => 'banner',
+  10 => 'tip',
+  11 => 'article_list',
+  12 => 'page',
+  13 => 'article_search',
+  14 => 'article_tag',
+  15 => 'article_type_id',
+  16 => 'article_date',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011219s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_article_type` [ RunTime:0.073978s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_article_type` ORDER BY sort asc [ RunTime:0.000548s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_article_tag` [ RunTime:0.050690s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_article_tag` WHERE  `status` = 1 [ RunTime:0.000523s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_article` [ RunTime:0.039872s ]
+[ sql ] [ SQL ] SELECT `id`,FROM_UNIXTIME(create_time, "%Y-%m") AS `date`,FROM_UNIXTIME(create_time, "%Y年-%m月") AS `date_show` FROM `sg_article` WHERE  `status` = 1 GROUP BY `date` ORDER BY date desc [ RunTime:0.000717s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `sg_article` WHERE  `status` = 1 ORDER BY view desc LIMIT 5 [ RunTime:0.000487s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_system` [ RunTime:0.060147s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_system` WHERE  `system_type` = 'SEO设置' LIMIT 1 [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_system` WHERE  `system_type` = '网站设置' LIMIT 1 [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_banner` [ RunTime:0.059397s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_banner` WHERE  (  1=1 ) [ RunTime:0.001129s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_tip` [ RunTime:0.019689s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_tip` WHERE  (  1=1 ) [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_article` WHERE  `status` = 1 ORDER BY create_time desc LIMIT 0,6 [ RunTime:0.000821s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sg_article` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000627s ]
+---------------------------------------------------------------
+[ 2018-04-22T10:39:06+08:00 ] 127.0.0.1 127.0.0.1 GET /admin
+[ info ] www.ceshi.com/admin [运行时间：0.319554s][吞吐率：3.13req/s] [内存消耗：1,269.86kb] [文件加载：45]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; PHPSESSID=h5rv9260legqbbonh5qqrtjvf5; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524197494,1524204107,1524226322,1524364739; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524364739',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-22T10:39:06+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ info ] www.ceshi.com/admin/login/index.html [运行时间：0.074401s][吞吐率：13.44req/s] [内存消耗：1,271.60kb] [文件加载：43]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; PHPSESSID=h5rv9260legqbbonh5qqrtjvf5; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524197494,1524204107,1524226322,1524364739; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524364739',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-22T10:39:06+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/checkverify.html
+[ info ] www.ceshi.com/admin/login/checkverify.html [运行时间：0.208130s][吞吐率：4.80req/s] [内存消耗：1,266.68kb] [文件加载：42]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'checkverify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; PHPSESSID=h5rv9260legqbbonh5qqrtjvf5; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524197494,1524204107,1524226322,1524364739; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524364739',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/checkverify_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->checkVerify[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-22T10:39:16+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/login.html
+[ info ] www.ceshi.com/admin/login/login.html [运行时间：0.073936s][吞吐率：13.53req/s] [内存消耗：2,045.50kb] [文件加载：53]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; PHPSESSID=h5rv9260legqbbonh5qqrtjvf5; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524197494,1524204107,1524226322,1524364739; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524364739',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.ceshi.com',
+  'accept' => '*/*',
+  'content-length' => '82',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  '__token__' => '22016f6fbcdd4ec5ad8f1843f30a0d3d',
+  'username' => 'admin',
+  'password' => 'zq042',
+  'code' => '5181',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-22T10:39:22+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ info ] www.ceshi.com/admin/login/index.html [运行时间：0.024468s][吞吐率：40.87req/s] [内存消耗：1,271.99kb] [文件加载：43]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; PHPSESSID=h5rv9260legqbbonh5qqrtjvf5; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524197494,1524204107,1524226322,1524364739; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524364739',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-22T10:39:22+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/checkverify.html
+[ info ] www.ceshi.com/admin/login/checkverify.html [运行时间：0.130878s][吞吐率：7.64req/s] [内存消耗：1,267.14kb] [文件加载：42]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'checkverify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; PHPSESSID=h5rv9260legqbbonh5qqrtjvf5; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524197494,1524204107,1524226322,1524364739; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524364739',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/checkverify_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->checkVerify[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-22T10:39:32+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/login.html
+[ info ] www.ceshi.com/admin/login/login.html [运行时间：0.118892s][吞吐率：8.41req/s] [内存消耗：2,183.16kb] [文件加载：55]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; PHPSESSID=h5rv9260legqbbonh5qqrtjvf5; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524197494,1524204107,1524226322,1524364739; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524364739',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.ceshi.com',
+  'accept' => '*/*',
+  'content-length' => '83',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  '__token__' => 'c8d2f424087f7e0e9b9603dca95de242',
+  'username' => 'admin',
+  'password' => 'zq0429',
+  'code' => '8805',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001106s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_admin` [ RunTime:0.091321s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_admin` WHERE  `username` = 'admin'  AND `password` = '4122c02daf8afaf02956fc3abe5a2c1d' LIMIT 1 [ RunTime:0.000508s ]
+---------------------------------------------------------------
+[ 2018-04-22T10:39:33+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ info ] www.ceshi.com/admin/index/index.html [运行时间：0.112625s][吞吐率：8.88req/s] [内存消耗：1,516.01kb] [文件加载：48]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; PHPSESSID=h5rv9260legqbbonh5qqrtjvf5; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524197494,1524204107,1524226322,1524364739; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524364739',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/admin\view\index\index.html [ array (
+  0 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-22T10:39:34+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/main.html
+[ info ] www.ceshi.com/admin/index/main.html [运行时间：0.041979s][吞吐率：23.82req/s] [内存消耗：1,466.26kb] [文件加载：47]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; PHPSESSID=h5rv9260legqbbonh5qqrtjvf5; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524197494,1524204107,1524226322,1524364739; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524364739',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/main_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->main[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/admin\view\index\main.html [ array (
+  0 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-22T10:39:34+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Api/getRuleList
+[ info ] www.ceshi.com/admin/Api/getRuleList [运行时间：0.146697s][吞吐率：6.82req/s] [内存消耗：2,189.51kb] [文件加载：55]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Api',
+    2 => 'getRuleList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; PHPSESSID=h5rv9260legqbbonh5qqrtjvf5; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524197494,1524204107,1524226322,1524364739; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524364739',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Api/getRuleList' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Api->getRuleList[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Api.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000903s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_admin` [ RunTime:0.017809s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_admin` WHERE  `id` = 50 LIMIT 1 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_auth_rule` [ RunTime:0.066950s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_auth_rule` ORDER BY sort asc [ RunTime:0.001190s ]
+---------------------------------------------------------------
+[ 2018-04-22T10:39:38+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/admin/updatepassword.html
+[ info ] www.ceshi.com/admin/admin/updatepassword.html [运行时间：0.134869s][吞吐率：7.41req/s] [内存消耗：2,088.86kb] [文件加载：54]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'updatepassword',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; PHPSESSID=h5rv9260legqbbonh5qqrtjvf5; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524197494,1524204107,1524226322,1524364739; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524364739',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/admin/updatepassword_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Admin->updatePassword[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Admin.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/admin\view\admin\updatepassword.html [ array (
+  0 => 'config',
+  1 => 'admin',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-22T10:39:46+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/admin/updatepassword.html
+[ info ] www.ceshi.com/admin/admin/updatepassword.html [运行时间：0.262324s][吞吐率：3.81req/s] [内存消耗：2,159.96kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'updatepassword',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; PHPSESSID=h5rv9260legqbbonh5qqrtjvf5; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524197494,1524204107,1524226322,1524364739; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524364739',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/admin/updatepassword.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.ceshi.com',
+  'accept' => '*/*',
+  'content-length' => '60',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/admin/updatepassword_html' => '',
+  'id' => '50',
+  'username' => 'admin',
+  'password' => '123456',
+  'confirm_password' => '123456',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Admin->updatePassword[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Admin.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010774s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_auth_group_access` [ RunTime:0.048616s ]
+[ sql ] [ SQL ] SELECT `group_id` FROM `sg_auth_group_access` WHERE  `uid` = 50 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_admin` [ RunTime:0.007298s ]
+[ sql ] [ SQL ] UPDATE `sg_admin`  SET `username`='admin',`password`='e10adc3949ba59abbe56e057f20f883e',`update_time`=1524364786  WHERE  `id` = 50 [ RunTime:0.000680s ]
+---------------------------------------------------------------
+[ 2018-04-22T10:39:47+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/admin/updatepassword.html
+[ info ] www.ceshi.com/admin/admin/updatepassword.html [运行时间：0.030280s][吞吐率：33.02req/s] [内存消耗：2,088.94kb] [文件加载：54]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'updatepassword',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; bdshare_firstime=1523881198904; PHPSESSID=h5rv9260legqbbonh5qqrtjvf5; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524197494,1524204107,1524226322,1524364739; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1524364739',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/admin/updatepassword.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/admin/updatepassword_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Admin->updatePassword[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Admin.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/admin\view\admin\updatepassword.html [ array (
+  0 => 'config',
+  1 => 'admin',
+) ]
+[ info ] [ LOG ] INIT File

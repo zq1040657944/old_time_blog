@@ -1,0 +1,2873 @@
+---------------------------------------------------------------
+[ 2018-04-16T17:49:06+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] www.ceshi.com/ [运行时间：1.133516s][吞吐率：0.88req/s] [内存消耗：2,324.41kb] [文件加载：60]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523589402,1523603866,1523619379,1523712127',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT file
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\Users\hp\Desktop\ceshi\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/index\view\index\index.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'article_type_list',
+  3 => 'article_tag_list',
+  4 => 'article_date_list',
+  5 => 'article_hot_list',
+  6 => 'system',
+  7 => 'seo',
+  8 => 'footer',
+  9 => 'article_list',
+  10 => 'page',
+  11 => 'article_search',
+  12 => 'article_tag',
+  13 => 'article_type_id',
+  14 => 'article_date',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008969s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_article_type` [ RunTime:0.187485s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_article_type` ORDER BY sort asc [ RunTime:0.000727s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_article_tag` [ RunTime:0.153884s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_article_tag` WHERE  `status` = 1 [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_article` [ RunTime:0.365366s ]
+[ sql ] [ SQL ] SELECT `id`,FROM_UNIXTIME(create_time, "%Y-%m") AS `date`,FROM_UNIXTIME(create_time, "%Y年-%m月") AS `date_show` FROM `sg_article` WHERE  `status` = 1 GROUP BY `date` ORDER BY date desc [ RunTime:0.001065s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `sg_article` WHERE  `status` = 1 ORDER BY view desc LIMIT 5 [ RunTime:0.000539s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_system` [ RunTime:0.335062s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_system` WHERE  `system_type` = 'SEO设置' LIMIT 1 [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_system` WHERE  `system_type` = '网站设置' LIMIT 1 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_article` WHERE  `status` = 1 ORDER BY create_time desc LIMIT 0,6 [ RunTime:0.000712s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sg_article` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000461s ]
+---------------------------------------------------------------
+[ 2018-04-16T17:49:06+08:00 ] 127.0.0.1 127.0.0.1 GET /static/blog/images/c.jpg
+[ info ] www.ceshi.com/static/blog/images/c.jpg [运行时间：0.023366s][吞吐率：42.80req/s] [内存消耗：1,034.48kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'blog',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523589402,1523603866,1523619379,1523712127; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/static/blog/images/c_jpg' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:49:07+08:00 ] 127.0.0.1 127.0.0.1 GET /static/blog/images/e.png
+[ info ] www.ceshi.com/static/blog/images/e.png [运行时间：0.024488s][吞吐率：40.84req/s] [内存消耗：1,034.48kb] [文件加载：35]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'blog',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523589402,1523603866,1523619379,1523712127; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/static/blog/images/e_png' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:49:12+08:00 ] 127.0.0.1 127.0.0.1 GET /admin
+[ info ] www.ceshi.com/admin [运行时间：0.104393s][吞吐率：9.58req/s] [内存消耗：1,269.67kb] [文件加载：45]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:49:12+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ info ] www.ceshi.com/admin/login/index.html [运行时间：0.123755s][吞吐率：8.08req/s] [内存消耗：1,271.41kb] [文件加载：43]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:49:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/checkverify.html
+[ info ] www.ceshi.com/admin/login/checkverify.html [运行时间：1.133978s][吞吐率：0.88req/s] [内存消耗：1,266.62kb] [文件加载：42]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'checkverify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/checkverify_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->checkVerify[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:49:36+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/login.html
+[ info ] www.ceshi.com/admin/login/login.html [运行时间：0.228357s][吞吐率：4.38req/s] [内存消耗：2,135.20kb] [文件加载：54]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.ceshi.com',
+  'accept' => '*/*',
+  'content-length' => '85',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  '__token__' => '8149a109493a00b02001b12fe711c72b',
+  'username' => 'admin',
+  'password' => 'zq970429',
+  'code' => '2059',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001224s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_admin` [ RunTime:0.049800s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_admin` WHERE  `username` = 'admin'  AND `password` = '52772f1e952fb7df35a3ea218d265b91' LIMIT 1 [ RunTime:0.000777s ]
+---------------------------------------------------------------
+[ 2018-04-16T17:49:44+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ info ] www.ceshi.com/admin/login/index.html [运行时间：0.040825s][吞吐率：24.49req/s] [内存消耗：1,271.88kb] [文件加载：43]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:49:44+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/checkverify.html
+[ info ] www.ceshi.com/admin/login/checkverify.html [运行时间：0.035892s][吞吐率：27.86req/s] [内存消耗：1,266.62kb] [文件加载：42]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'checkverify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/checkverify_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->checkVerify[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:49:52+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/login.html
+[ info ] www.ceshi.com/admin/login/login.html [运行时间：0.042138s][吞吐率：23.73req/s] [内存消耗：1,976.22kb] [文件加载：52]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.ceshi.com',
+  'accept' => '*/*',
+  'content-length' => '83',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  '__token__' => '587a2f4538bc085f695638dc4f17f7b6',
+  'username' => 'admin',
+  'password' => 'zq0429',
+  'code' => '6577',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:49:54+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ info ] www.ceshi.com/admin/login/index.html [运行时间：0.034603s][吞吐率：28.90req/s] [内存消耗：1,272.53kb] [文件加载：43]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:49:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/checkverify.html
+[ info ] www.ceshi.com/admin/login/checkverify.html [运行时间：0.068629s][吞吐率：14.57req/s] [内存消耗：1,266.74kb] [文件加载：42]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'checkverify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/checkverify_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->checkVerify[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:50:03+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/login.html
+[ info ] www.ceshi.com/admin/login/login.html [运行时间：0.041664s][吞吐率：24.00req/s] [内存消耗：1,976.22kb] [文件加载：52]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.ceshi.com',
+  'accept' => '*/*',
+  'content-length' => '83',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  '__token__' => 'e12742eaa39409e1534071bcdd5f8d53',
+  'username' => 'admin',
+  'password' => 'zq0429',
+  'code' => '6757',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:50:05+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ info ] www.ceshi.com/admin/login/index.html [运行时间：0.037281s][吞吐率：26.82req/s] [内存消耗：1,272.53kb] [文件加载：43]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:50:05+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/checkverify.html
+[ info ] www.ceshi.com/admin/login/checkverify.html [运行时间：0.127366s][吞吐率：7.85req/s] [内存消耗：1,266.74kb] [文件加载：42]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'checkverify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/checkverify_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->checkVerify[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:50:12+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/login.html
+[ info ] www.ceshi.com/admin/login/login.html [运行时间：0.149353s][吞吐率：6.70req/s] [内存消耗：2,182.84kb] [文件加载：55]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.ceshi.com',
+  'accept' => '*/*',
+  'content-length' => '83',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  '__token__' => '4981e5181a725716c03f6072cb212afa',
+  'username' => 'admin',
+  'password' => 'zq0429',
+  'code' => '9710',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001060s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_admin` [ RunTime:0.108199s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_admin` WHERE  `username` = 'admin'  AND `password` = '4122c02daf8afaf02956fc3abe5a2c1d' LIMIT 1 [ RunTime:0.000650s ]
+---------------------------------------------------------------
+[ 2018-04-16T17:50:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ info ] www.ceshi.com/admin/index/index.html [运行时间：0.092692s][吞吐率：10.79req/s] [内存消耗：1,515.95kb] [文件加载：48]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/admin\view\index\index.html [ array (
+  0 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:50:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/main.html
+[ info ] www.ceshi.com/admin/index/main.html [运行时间：0.063448s][吞吐率：15.76req/s] [内存消耗：1,466.20kb] [文件加载：47]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/main_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->main[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] C:\Users\hp\Desktop\ceshi\public/../application/admin\view\index\main.html [ array (
+  0 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T17:50:15+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Api/getRuleList
+[ info ] www.ceshi.com/admin/Api/getRuleList [运行时间：0.175673s][吞吐率：5.69req/s] [内存消耗：2,188.73kb] [文件加载：55]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Api',
+    2 => 'getRuleList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ceshi.com/admin/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/Api/getRuleList' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Api->getRuleList[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Api.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001116s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_admin` [ RunTime:0.012591s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_admin` WHERE  `id` = 50 LIMIT 1 [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sg_auth_rule` [ RunTime:0.068730s ]
+[ sql ] [ SQL ] SELECT * FROM `sg_auth_rule` ORDER BY sort asc [ RunTime:0.001464s ]
+---------------------------------------------------------------
+[ 2018-04-16T17:50:53+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.035519s][吞吐率：28.15req/s] [内存消耗：1,463.16kb] [文件加载：46]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-16T18:22:34+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.056109s][吞吐率：17.82req/s] [内存消耗：1,045.79kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected '/', expecting ',' or ';'[C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php:4]
+---------------------------------------------------------------
+[ 2018-04-16T18:22:54+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.021335s][吞吐率：46.87req/s] [内存消耗：1,045.79kb] [文件加载：37]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected '/', expecting ',' or ';'[C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php:4]
+---------------------------------------------------------------
+[ 2018-04-16T18:23:05+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.387873s][吞吐率：2.58req/s] [内存消耗：2,053.84kb] [文件加载：56]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: time[C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php:32]
+---------------------------------------------------------------
+[ 2018-04-16T18:23:26+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.130819s][吞吐率：7.64req/s] [内存消耗：2,102.60kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002110s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:23:49+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.054357s][吞吐率：18.40req/s] [内存消耗：2,102.64kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000852s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:23:51+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.041821s][吞吐率：23.91req/s] [内存消耗：2,102.64kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000753s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:23:51+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.039486s][吞吐率：25.33req/s] [内存消耗：2,102.64kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000813s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:23:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.039636s][吞吐率：25.23req/s] [内存消耗：2,102.64kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000820s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:23:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.045064s][吞吐率：22.19req/s] [内存消耗：2,102.64kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000772s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:23:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.039468s][吞吐率：25.34req/s] [内存消耗：2,102.64kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000769s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:23:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.038755s][吞吐率：25.80req/s] [内存消耗：2,102.64kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000854s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:23:54+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.049112s][吞吐率：20.36req/s] [内存消耗：2,102.59kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000756s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:23:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.127758s][吞吐率：7.83req/s] [内存消耗：2,102.59kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000793s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:23:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.050529s][吞吐率：19.79req/s] [内存消耗：2,102.59kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000834s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:24:03+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.050182s][吞吐率：19.93req/s] [内存消耗：2,102.66kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000714s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:24:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.047904s][吞吐率：20.88req/s] [内存消耗：2,102.66kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000817s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:24:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.050608s][吞吐率：19.76req/s] [内存消耗：2,102.66kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000866s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:40+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.093727s][吞吐率：10.67req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000793s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:41+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.049810s][吞吐率：20.08req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000751s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:41+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.059764s][吞吐率：16.73req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010771s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:41+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.046723s][吞吐率：21.40req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000682s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:41+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.046450s][吞吐率：21.53req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000688s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:42+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.052733s][吞吐率：18.96req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000746s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:42+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.049181s][吞吐率：20.33req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000730s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:42+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.049254s][吞吐率：20.30req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000680s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:42+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.045951s][吞吐率：21.76req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000628s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:43+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.059971s][吞吐率：16.67req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000824s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:43+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.047702s][吞吐率：20.96req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000659s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:43+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.045557s][吞吐率：21.95req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000655s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:43+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.047667s][吞吐率：20.98req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000790s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:44+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.050653s][吞吐率：19.74req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000779s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:44+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.049528s][吞吐率：20.19req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000794s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:26:44+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.051271s][吞吐率：19.50req/s] [内存消耗：2,102.63kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000756s ] mysql:host=127.0.0.1;port=3306;dbname=sg_blog;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sg_blog.service_t_reader' doesn't exist[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:27:41+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.078797s][吞吐率：12.69req/s] [内存消耗：2,093.57kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000797s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.009067s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:27:42+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.052646s][吞吐率：18.99req/s] [内存消耗：2,093.57kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000838s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.011228s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:27:42+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.050562s][吞吐率：19.78req/s] [内存消耗：2,093.57kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000852s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.010856s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:28:38+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.049157s][吞吐率：20.34req/s] [内存消耗：2,093.52kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001028s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.007841s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:28:38+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.050185s][吞吐率：19.93req/s] [内存消耗：2,093.52kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000846s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.011006s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:28:38+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.051810s][吞吐率：19.30req/s] [内存消耗：2,093.52kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001407s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.008381s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:28:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.052938s][吞吐率：18.89req/s] [内存消耗：2,093.52kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000885s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.007726s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:28:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.055589s][吞吐率：17.99req/s] [内存消耗：2,093.52kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000703s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.009836s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:28:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.048688s][吞吐率：20.54req/s] [内存消耗：2,093.52kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000791s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.009126s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:28:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.047030s][吞吐率：21.26req/s] [内存消耗：2,093.52kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000668s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.008971s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:28:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.053040s][吞吐率：18.85req/s] [内存消耗：2,093.52kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000664s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.008663s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:28:40+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.049114s][吞吐率：20.36req/s] [内存消耗：2,093.52kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000670s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.009026s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:28:40+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.053491s][吞吐率：18.69req/s] [内存消耗：2,093.52kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000703s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.007267s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:30:46+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.094200s][吞吐率：10.62req/s] [内存消耗：2,093.26kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001792s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.009218s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1630 FUNCTION b.sum does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:31:28+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.056950s][吞吐率：17.56req/s] [内存消耗：2,092.84kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000881s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.012776s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:31:36+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.055482s][吞吐率：18.02req/s] [内存消耗：2,092.80kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000897s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.008990s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:31:36+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.056670s][吞吐率：17.65req/s] [内存消耗：2,092.80kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001572s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.011795s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:31:37+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.054213s][吞吐率：18.45req/s] [内存消耗：2,092.80kb] [文件加载：58]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000706s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_reader` [ RunTime:0.008033s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LINEN_COUNT' in 'field list'[C:\Users\hp\Desktop\ceshi\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-16T18:32:25+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.051458s][吞吐率：19.43req/s] [内存消耗：2,135.48kb] [文件加载：56]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000896s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_receipt_main` [ RunTime:0.008932s ]
+[ sql ] [ SQL ] SELECT `a`.`READER_ID`,sum(LINEN_COUNT) c FROM `service_t_receipt_main` `a` INNER JOIN `SERVICE_T_READER` `b` ON `a`.`READER_ID`=`b`.`READER_ID` WHERE  `a`.`CREATE_TIME` >  '2018-04-09 18:32:25'  AND `a`.`USER_ID` = 1 [ RunTime:0.000431s ]
+[ error ] [0]致命错误: Call to undefined function app\admin\controller\vae_dump()[C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php:35]
+---------------------------------------------------------------
+[ 2018-04-16T18:32:36+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/time
+[ info ] www.ceshi.com/admin/index/time [运行时间：0.048179s][吞吐率：20.76req/s] [内存消耗：2,099.52kb] [文件加载：53]
+[ info ] [ LANG ] C:\Users\hp\Desktop\ceshi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'time',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'token=81442q0A9RlHipWTpBM3rxPC08MXsUDhrryb%2BZ68TFu9RezT8tpsHDI7dVj19fIJFzyWxIJBYPSinGyEOPyCXRzxUR9OnhYycn4; UM_distinctid=162a5d91a09a9b-07e2a5127a664c-3e63430c-100200-162a5d91a4065d; CNZZDATA1265231242=1158240216-1523200889-%7C1523250708; PHPSESSID=fn72c3mkfo3mnejiaidacmpmp3; Hm_lvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523603866,1523619379,1523712127,1523872151; Hm_lpvt_ebde62a3c8d8ba0c9aa5007b88c9b6d0=1523872151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.ceshi.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/time' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->time[ C:\Users\hp\Desktop\ceshi\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000653s ] mysql:host=127.0.0.1;port=3306;dbname=sdz;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `service_t_receipt_main` [ RunTime:0.008724s ]
+[ sql ] [ SQL ] SELECT `a`.`READER_ID`,sum(LINEN_COUNT) c FROM `service_t_receipt_main` `a` INNER JOIN `SERVICE_T_READER` `b` ON `a`.`READER_ID`=`b`.`READER_ID` WHERE  `a`.`CREATE_TIME` >  '2018-04-09 18:32:36'  AND `a`.`USER_ID` = 1 [ RunTime:0.000467s ]

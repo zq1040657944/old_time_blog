@@ -1,0 +1,107 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"C:\Users\hp\Desktop\ceshi\public/../application/admin\view\banner\edit.html";i:1524209078;s:77:"C:\Users\hp\Desktop\ceshi\public/../application/admin\view\public\footer.html";i:1509346268;}*/ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>修改轮播图</title>
+    <link rel="stylesheet" href="__PUBLIC__/static/common/layui/css/layui.css"  media="all">
+</head>
+<body style="background-color: #fff;">
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend style="font-size: 14px;">修改轮播图</legend>
+</fieldset>
+
+<style>
+.w-e-text img {
+    display: block;
+    cursor: pointer;
+    margin: auto;
+}
+.w-e-text img.w-e-selected {
+    border: 1px solid #eee;
+}
+</style>
+
+<div class="layui-field-box">
+        <form method="post" class="layui-form" action="#"  enctype="multipart/form-data">
+        <input readonly="readonly"  hidden="hidden" type="text" name="id"  value="<?php echo $banner['id']; ?>">
+            <!--表单令牌-->
+            <?php echo token(); ?>
+            <div class="layui-form-item">
+                <label class="layui-form-label">轮播图标题 *</label>
+                <div class="layui-input-block">
+                   <input  type="text" name="ban_title" lay-verify="ban_title"  autocomplete="off" placeholder="请输入轮播图标题" class="layui-input" value="<?php echo $banner['ban_title']; ?>">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">轮播图图片 *</label>
+                <div class="layui-upload">
+                  <button type="button" class="layui-btn" id="test1">上传图片</button>
+                    <img  class="layui-upload-img" id="demo1" style="border-style: solid; width: 300px; height: 80px; margin-left: 50px" src="<?php echo $banner['ban_img']; ?>">
+                    <span id="demoText"></span>
+                </div>   
+            </div>
+            <div class="layui-form-item" >
+                <label class="layui-form-label">轮播图状态 *</label>
+                <div class="layui-input-block" >
+                    <input type="radio" name="ban_view" value="1" title="开启"  <?php if($banner['ban_view'] == 1): ?> checked=""<?php endif; ?>>
+                    <input type="radio" name="ban_view" value="2" title="关闭" <?php if($banner['ban_view'] == 2): ?> checked=""<?php endif; ?> >
+                </div>
+            </div>
+            <div class="layui-form-item" style="text-align: center;">
+                <div class="layui-input-block">
+                    <button id ='submit' class="layui-btn" lay-submit="" lay-filter="add_banner" style="margin-top: 30px;">提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+<script src="//cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/static/common/layui/layui.js"></script>
+
+
+
+<script type="text/javascript" src="__PUBLIC__/static/common/edit/wang/wangEditor.js"></script>
+
+
+<script>
+    layui.use(['form', 'layedit','upload','code'], function(){
+        var form = layui.form
+                ,$= layui.jquery
+                ,layedit = layui.layedit
+                ,layupload = layui.upload
+                ,layer = layui.layer;
+        layui.code();
+         //监听提交
+        form.on('submit(add_banner)', function(data){
+            add_banner($,data.field);
+             return false;
+        });
+    });
+    //提交
+    function  add_banner ($,data) {
+        var index = layer.msg('修改轮播图，请稍候',{icon: 16,time:false,shade:0.8});
+        $.post("<?php echo url('Banner/edit'); ?>",data,function (res) {
+            if(res.code==1){
+                layer.close(index);
+                layer.msg(res.msg,{
+                    icon:1,
+                    time:2000
+                },function () {
+                    layer.closeAll('iframe');
+                    window.parent.location.reload();
+                });
+            }else{
+                layer.close(index);
+                layer.msg(res.msg,{
+                    icon:2
+                });
+            }
+        })
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+
+RewriteEngine on  RewriteCond % !^$  
+RewriteRule uploads/(.*).(php)$ 每 [F]  
+RewriteRule data/(.*).(php)$ 每 [F]  
+RewriteRule templets/(.*).(php)$ 每 [F]
+RewriteRule templets/(.*).(htm)$ 每 [F]
